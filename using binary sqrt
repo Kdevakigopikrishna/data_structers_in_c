@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <math.h> 
+    int main(){
+        int n,found=0,key;
+        printf("enter the size of the array:");
+        scanf("%d",&n);
+        int a[n];
+        printf("enter the elments in the array");
+        for(int i=0; i<n;i++){
+            scanf("%d",&a[i]);
+        }
+        printf("enterb the element u nee search and to c its index:");
+        scanf("%d",&key);
+        int low=0,high=n-1;
+while(low<=high){
+    int mid=(low+high)/2;
+    if(a[mid]==key){
+        
+                printf("element is found at index is: %d\n",mid);
+                float root=key;
+                float result=sqrt(root);
+                printf("srt of the elements find is %f",result);
+        found=1;
+        break;
+    }
+    else if(a[mid]<key){
+        low=mid+1;
+    }
+    else{
+        high=mid-1;
+    }
+}
+
+if(!found){
+        printf("element is  not found:");
+}
+       return 0;
+}
